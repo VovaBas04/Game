@@ -1,0 +1,22 @@
+# ninja log v5
+3	1044	1663776517271589953	CMakeFiles/untitled.dir/main.cpp.o	d4401d2581971d02
+1	36	1664276968390297004	build.ninja	8263b8911f04ded7
+4	1241	1663687989082140204	CMakeFiles/untitled.dir/Move.cpp.o	eba2adfea30b65dd
+4	965	1663776517195588579	CMakeFiles/untitled.dir/Playing_cell_view.cpp.o	a5ae257c64b0e1c3
+4	1133	1663776517363591616	CMakeFiles/untitled.dir/Playing_map.cpp.o	35d2a5de19f1f1b6
+4	831	1663776517059586121	CMakeFiles/untitled.dir/Playing_cell.cpp.o	fe252e188938e97f
+1	815	1663681788413673714	CMakeFiles/untitled.dir/Command_reader.cpp.o	6e385af82aa9d251
+1	496	1663776531831841894	CMakeFiles/untitled.dir/Playing_map_view.cpp.o	fd51f648398e4716
+496	635	1663776531971844214	untitled	a92e9ee9ee37687d
+1	1068	1663619764330859091	CMakeFiles/untitled.dir/Player.cpp.o	744e03bce3ba9e0a
+12	149	1663270158254752493	CMakeFiles/untitled.dir/Event_playing.cpp.o	b5555a42175a95cf
+1	25	1664277017487337755	CMakeFiles/untitled.dir/Event_playing.cpp.o	d59fbc74e7608a9c
+1	570	1664277018031272207	CMakeFiles/untitled.dir/Playing_cell.cpp.o	212f3f873ac27ffb
+25	635	1664277018099264161	CMakeFiles/untitled.dir/Playing_cell_view.cpp.o	c2b5ea013e63edf7
+1	722	1664277018183254222	CMakeFiles/untitled.dir/Player.cpp.o	d35f13c499583f51
+1	804	1664277018267244283	CMakeFiles/untitled.dir/Move.cpp.o	876d3c330c64b129
+0	903	1664277018367232450	CMakeFiles/untitled.dir/main.cpp.o	a7931415f7bb0ab1
+1	980	1664277018443223457	CMakeFiles/untitled.dir/Playing_map.cpp.o	94c09930adcf41d
+570	1040	1664277018503216357	CMakeFiles/untitled.dir/Playing_map_view.cpp.o	9e54fb32f9e935ee
+635	1208	1664277018671196479	CMakeFiles/untitled.dir/Command_reader.cpp.o	c43705b8cdd0ad93
+1208	1296	1664277018759186066	untitled	a92e9ee9ee37687d
