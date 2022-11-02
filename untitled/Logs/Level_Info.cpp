@@ -5,7 +5,6 @@
 #include "Level_Info.h"
 Level_Info::Level_Info() {
     level="[INF]";
-    is_print=false;
     is_update=false;
 }
 

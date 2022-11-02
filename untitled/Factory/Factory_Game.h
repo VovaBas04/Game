@@ -12,11 +12,11 @@ class Factory_Game: public Abstract_factory{
 public:
     Event_playing * create_positive_event() override;
     Event_playing * create_negative_event() override;
-    Factory_Game(Player *h, sf::Window *w, Observer_Levels* l);
+    Factory_Game(Player *h, sf::Window *w, Observable* l);
 private:
     Player *hero;
     sf::Window *window;
-    Observer_Levels *level_info;
+    Observable *level_info;
 };
 
 

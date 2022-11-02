@@ -61,55 +61,41 @@ int Command_reader::get_height(){
 sf::Sprite *Command_reader::get_sprite(){
     return &point_hero;
 }
-void Command_reader::set_levels(std::vector<Observer_Levels *> levels){
-    int ind;
+void Command_reader::set_levels(std::vector<Observer_Levels *> *levels){
     std::cout<<"Введите через запятую уровни логирования через запятую, например:[INF],[GM],[WRN].В случае не распознанной команды логирования не будет."<<'\n';
     std::string s;
     std::getline(std::cin,s);
     int d=s.find(',');
     if (d!=-1){
         std::string s1=s.substr(0,d);
-        ind= get_level(s1);
-        if (ind!=No_Level)
-            levels[ind]->set_print(true);
+        set_level(s1,levels);
         std::string s2=s.substr(d+1);
         int f=s2.find(',');
         if (f!=-1){
             std::string s3=s2.substr(f+1);
-            ind= get_level(s3);
-            if (ind!=No_Level)
-                levels[ind]->set_print(true);
+            set_level(s3,levels);
             s2=s2.substr(0,f);
-            ind= get_level(s2);
-            if (ind!=No_Level)
-                levels[ind]->set_print(true);
-            std::cout<<s1<<'\n'<<s2<<'\n'<<s3;
+            set_level(s2,levels);
         }
         else
             {
-                ind= get_level(s2);
-                if (ind!=No_Level)
-                    levels[ind]->set_print(true);
+                set_level(s2,levels);
             }
     }
     else{
-        ind= get_level(s);
-        if (ind!=No_Level)
-            levels[ind]->set_print(true);
+        set_level(s,levels);
 
     }
 }
-int Command_reader::get_level(std::string s) {
+void Command_reader::set_level(std::string s,std::vector<Observer_Levels *> *levels) {
     if (s=="[INF]")
-        return Info;
+        levels->push_back(new Level_Info());
     else
         if (s=="[GM]")
-            return Game;
+            levels->push_back(new Level_Game());
         else
             if (s=="[WRN]")
-                return Warning;
-            else
-                return No_Level;
+                levels->push_back(new Level_Warning());
 }
 void Command_reader::set_loggers(std::vector<Logger *> &l) {
     std::cout<<"Введите без пробелов символ C-если хотите выводить логи через консоль, иначе символ F если файл.Например:CF\n";

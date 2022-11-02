@@ -3,15 +3,15 @@
 //
 
 #include "Level.h"
-void Level::set_command(int val) {
+void Level::set_command(Commands * val) {
     key=val;
     is_update= true;
 }
-int Level::get_command() {
+Commands * Level::get_command() {
     return key;
 }
 Message *Level::update(){
-    if (is_update && is_print){
+    if (is_update){
         is_update= false;
         Message *m=create_Message();
         return m;
@@ -22,7 +22,4 @@ Message *Level::update(){
 std::string Level::get_level() {
     return level;
 
-}
-void Level::set_print(bool is){
-    is_print=is;
 }

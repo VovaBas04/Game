@@ -6,10 +6,11 @@
 #define UNTITLED_DEFEAT_H
 
 #include "Game_over.h"
+#include "../Logs/Command_defeat.h"
 class Defeat: public Game_over{
 public:
     void change_play() override;
-    Defeat(Player *h, sf::Window *w, Observer_Levels *l);
+    Defeat(Player *h, sf::Window *w, Observable *l);
 };
 
 

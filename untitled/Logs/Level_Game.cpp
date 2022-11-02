@@ -5,7 +5,6 @@
 #include "Level_Game.h"
 Level_Game::Level_Game(){
     level="[GM]";
-    is_print= false;
     is_update=false;
 }
 

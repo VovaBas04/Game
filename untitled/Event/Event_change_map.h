@@ -10,7 +10,7 @@
 class Event_change_map:public Event_playing {
 protected:
     std::vector<Playing_cell *> near_field;
-    Observer_Levels *level;
+    Observable *level;
 };
 
 

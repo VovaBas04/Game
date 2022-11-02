@@ -11,10 +11,10 @@ class Factory_Map:public Abstract_factory {
 public:
     Event_playing * create_positive_event() override;
     Event_playing * create_negative_event() override;
-    Factory_Map(std::vector<Playing_cell *> c, Observer_Levels *l);
+    Factory_Map(std::vector<Playing_cell *> c, Observable *l);
 private:
     std::vector<Playing_cell *> near_field;
-    Observer_Levels *level;
+    Observable *level;
 };
 
 

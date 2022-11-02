@@ -11,7 +11,7 @@ public:
 //    virtual bool is_max_count(int characteristic)=0;
 protected:
     Player *hero;
-    Observer_Levels *level;
+    Observable *level;
 };
 
 

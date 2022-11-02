@@ -271,6 +271,72 @@ build CMakeFiles/untitled.dir/Logs/Observer_Levels.cpp.o: CXX_COMPILER__untitled
   OBJECT_DIR = CMakeFiles/untitled.dir
   OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
 
+build CMakeFiles/untitled.dir/Logs/Commands.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Commands.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Commands.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_Buf.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_Buf.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_Buf.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_decrease_health.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_decrease_health.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_decrease_health.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_decrease_power.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_decrease_power.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_decrease_power.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_create_wall.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_create_wall.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_create_wall.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_destroy_wall.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_destroy_wall.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_destroy_wall.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_constructor.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_constructor.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_constructor.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_dont_move.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_dont_move.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_dont_move.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_Victory.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_Victory.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_Victory.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_start.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_start.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_start.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
+build CMakeFiles/untitled.dir/Logs/Command_defeat.cpp.o: CXX_COMPILER__untitled_Debug /home/vova/CLionProjects/Game/untitled/Logs/Command_defeat.cpp || cmake_object_order_depends_target_untitled
+  DEP_FILE = CMakeFiles/untitled.dir/Logs/Command_defeat.cpp.o.d
+  FLAGS = -g
+  OBJECT_DIR = CMakeFiles/untitled.dir
+  OBJECT_FILE_DIR = CMakeFiles/untitled.dir/Logs
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target untitled
@@ -279,7 +345,7 @@ build CMakeFiles/untitled.dir/Logs/Observer_Levels.cpp.o: CXX_COMPILER__untitled
 #############################################
 # Link the executable untitled
 
-build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Field/Playing_cell.cpp.o CMakeFiles/untitled.dir/Field/Playing_map.cpp.o CMakeFiles/untitled.dir/Play_mechanic/Player.cpp.o CMakeFiles/untitled.dir/Play_mechanic/Move.cpp.o CMakeFiles/untitled.dir/Event/Event_playing.cpp.o CMakeFiles/untitled.dir/View/Playing_cell_view.cpp.o CMakeFiles/untitled.dir/View/Playing_map_view.cpp.o CMakeFiles/untitled.dir/Command_reader.cpp.o CMakeFiles/untitled.dir/Event/Event_charasteristics.cpp.o CMakeFiles/untitled.dir/Event/Buf_health.cpp.o CMakeFiles/untitled.dir/Event/Decrease_power.cpp.o CMakeFiles/untitled.dir/Event/Event_change_map.cpp.o CMakeFiles/untitled.dir/Event/Destroy_wall.cpp.o CMakeFiles/untitled.dir/Event/Create_Wall.cpp.o CMakeFiles/untitled.dir/Factory/Abstract_factory.cpp.o CMakeFiles/untitled.dir/Event/Game_over.cpp.o CMakeFiles/untitled.dir/Event/Victory.cpp.o CMakeFiles/untitled.dir/Event/Defeat.cpp.o CMakeFiles/untitled.dir/Event/Decrease_health.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Game.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Map.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Characteristic.cpp.o CMakeFiles/untitled.dir/Logs/Message.cpp.o CMakeFiles/untitled.dir/Logs/Message_Game.cpp.o CMakeFiles/untitled.dir/Logs/Message_Info.cpp.o CMakeFiles/untitled.dir/Logs/Message_Warning.cpp.o CMakeFiles/untitled.dir/Logs/Level.cpp.o CMakeFiles/untitled.dir/Logs/Level_Info.cpp.o CMakeFiles/untitled.dir/Logs/Level_Game.cpp.o CMakeFiles/untitled.dir/Logs/Level_Warning.cpp.o CMakeFiles/untitled.dir/Logs/Logger.cpp.o CMakeFiles/untitled.dir/Logs/Logger_Console.cpp.o CMakeFiles/untitled.dir/Logs/Logger_File.cpp.o CMakeFiles/untitled.dir/Logs/Observable.cpp.o CMakeFiles/untitled.dir/Logs/Observe_object.cpp.o CMakeFiles/untitled.dir/Logs/Observer_Levels.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
+build untitled: CXX_EXECUTABLE_LINKER__untitled_Debug CMakeFiles/untitled.dir/main.cpp.o CMakeFiles/untitled.dir/Field/Playing_cell.cpp.o CMakeFiles/untitled.dir/Field/Playing_map.cpp.o CMakeFiles/untitled.dir/Play_mechanic/Player.cpp.o CMakeFiles/untitled.dir/Play_mechanic/Move.cpp.o CMakeFiles/untitled.dir/Event/Event_playing.cpp.o CMakeFiles/untitled.dir/View/Playing_cell_view.cpp.o CMakeFiles/untitled.dir/View/Playing_map_view.cpp.o CMakeFiles/untitled.dir/Command_reader.cpp.o CMakeFiles/untitled.dir/Event/Event_charasteristics.cpp.o CMakeFiles/untitled.dir/Event/Buf_health.cpp.o CMakeFiles/untitled.dir/Event/Decrease_power.cpp.o CMakeFiles/untitled.dir/Event/Event_change_map.cpp.o CMakeFiles/untitled.dir/Event/Destroy_wall.cpp.o CMakeFiles/untitled.dir/Event/Create_Wall.cpp.o CMakeFiles/untitled.dir/Factory/Abstract_factory.cpp.o CMakeFiles/untitled.dir/Event/Game_over.cpp.o CMakeFiles/untitled.dir/Event/Victory.cpp.o CMakeFiles/untitled.dir/Event/Defeat.cpp.o CMakeFiles/untitled.dir/Event/Decrease_health.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Game.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Map.cpp.o CMakeFiles/untitled.dir/Factory/Factory_Characteristic.cpp.o CMakeFiles/untitled.dir/Logs/Message.cpp.o CMakeFiles/untitled.dir/Logs/Message_Game.cpp.o CMakeFiles/untitled.dir/Logs/Message_Info.cpp.o CMakeFiles/untitled.dir/Logs/Message_Warning.cpp.o CMakeFiles/untitled.dir/Logs/Level.cpp.o CMakeFiles/untitled.dir/Logs/Level_Info.cpp.o CMakeFiles/untitled.dir/Logs/Level_Game.cpp.o CMakeFiles/untitled.dir/Logs/Level_Warning.cpp.o CMakeFiles/untitled.dir/Logs/Logger.cpp.o CMakeFiles/untitled.dir/Logs/Logger_Console.cpp.o CMakeFiles/untitled.dir/Logs/Logger_File.cpp.o CMakeFiles/untitled.dir/Logs/Observable.cpp.o CMakeFiles/untitled.dir/Logs/Observe_object.cpp.o CMakeFiles/untitled.dir/Logs/Observer_Levels.cpp.o CMakeFiles/untitled.dir/Logs/Commands.cpp.o CMakeFiles/untitled.dir/Logs/Command_Buf.cpp.o CMakeFiles/untitled.dir/Logs/Command_decrease_health.cpp.o CMakeFiles/untitled.dir/Logs/Command_decrease_power.cpp.o CMakeFiles/untitled.dir/Logs/Command_create_wall.cpp.o CMakeFiles/untitled.dir/Logs/Command_destroy_wall.cpp.o CMakeFiles/untitled.dir/Logs/Command_constructor.cpp.o CMakeFiles/untitled.dir/Logs/Command_dont_move.cpp.o CMakeFiles/untitled.dir/Logs/Command_Victory.cpp.o CMakeFiles/untitled.dir/Logs/Command_start.cpp.o CMakeFiles/untitled.dir/Logs/Command_defeat.cpp.o | /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1 /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   FLAGS = -g
   LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libsfml-graphics.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-audio.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-window.so.2.5.1  /usr/lib/x86_64-linux-gnu/libsfml-system.so.2.5.1
   OBJECT_DIR = CMakeFiles/untitled.dir

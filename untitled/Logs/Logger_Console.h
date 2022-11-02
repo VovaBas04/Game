@@ -10,6 +10,7 @@ class Logger_Console: public Logger{
 public:
     using Logger::Logger;
     void print() override;
+    ~Logger_Console() override= default;;
 };
 
 

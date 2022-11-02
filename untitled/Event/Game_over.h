@@ -10,7 +10,7 @@ class Game_over: public Event_playing{
 protected:
     Player *hero;
     sf::Window *window;
-    Observer_Levels *level_info;
+    Observable *level_info;
 public:
 };
 

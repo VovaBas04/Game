@@ -17,4 +17,4 @@ Event_playing * Factory_Characteristic::create_negative_event(){
     }
     return e;
 }
-Factory_Characteristic::Factory_Characteristic(Player *h, Observer_Levels *l): hero(h), level(l) {}
+Factory_Characteristic::Factory_Characteristic(Player *h, Observable *l): hero(h), level(l) {}

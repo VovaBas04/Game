@@ -20,7 +20,7 @@ public:
     Command_reader();
     void create_texture(std::string png);
     void set_count();
-    void set_levels(std::vector<Observer_Levels *> levels);
+    void set_levels(std::vector<Observer_Levels *> *levels);
     int keyboard_move();
     int get_width();
     int get_height();
@@ -34,7 +34,7 @@ private:
     sf::Sprite point_hero;
     int count_width;
     int count_height;
-    int get_level(std::string s);
+    void set_level(std::string s,std::vector<Observer_Levels *> *levels);
 };
 
 

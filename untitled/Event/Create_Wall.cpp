@@ -9,9 +9,9 @@ void Create_Wall::change_play() {
             near_field[i]->set_passability(false);
             break;
         }
-    level->set_command(Create);
+    level->set_command_of_prefix("[GM]",new Command_create_wall);
 }
-Create_Wall::Create_Wall(std::vector<Playing_cell *> c, Observer_Levels *l) {
+Create_Wall::Create_Wall(std::vector<Playing_cell *> c, Observable *l) {
     for(int i=0;i<4;i++)
         near_field.push_back(c[i]);
     level=l;

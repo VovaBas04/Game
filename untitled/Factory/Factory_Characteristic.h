@@ -13,10 +13,10 @@ class Factory_Characteristic: public Abstract_factory{
 public:
     Event_playing * create_positive_event() override;
     Event_playing * create_negative_event() override;
-    Factory_Characteristic(Player *h, Observer_Levels *l);
+    Factory_Characteristic(Player *h, Observable *l);
 private:
     Player *hero;
-    Observer_Levels *level;
+    Observable *level;
 };
 
 

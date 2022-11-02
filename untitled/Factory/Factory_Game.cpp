@@ -11,4 +11,4 @@ Event_playing * Factory_Game::create_negative_event(){
     Event_playing *e=new Defeat(hero,window,level_info);
     return e;
 }
-Factory_Game::Factory_Game(Player *h, sf::Window *w, Observer_Levels *l): hero(h), window(w), level_info(l){}
+Factory_Game::Factory_Game(Player *h, sf::Window *w, Observable *l): hero(h), window(w), level_info(l){}

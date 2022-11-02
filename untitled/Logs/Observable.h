@@ -10,6 +10,7 @@
 class Observable{
 public:
     virtual  void notify()=0;
+    virtual void set_command_of_prefix(std::string prefix,Commands *command)=0;
 };
 
 

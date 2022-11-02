@@ -6,7 +6,6 @@
 Level_Warning::Level_Warning() {
 //    key=k;
     level="[WRN]";
-    is_print=false;
     is_update=false;
 }
 

@@ -10,8 +10,13 @@
 #include <fstream>
 class Logger_File: public Logger{
 public:
-    using Logger::Logger;
+
+    explicit Logger_File(Message *m1);
+
     void print() override;
+    ~Logger_File() override;
+private:
+    std::fstream out;
 };
 
 

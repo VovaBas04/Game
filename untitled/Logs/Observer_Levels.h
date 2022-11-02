@@ -6,13 +6,13 @@
 #define UNTITLED_OBSERVER_LEVELS_H
 
 #include "Message.h"
+#include "Commands.h"
 class Observer_Levels {
 public:
     virtual Message * update()=0;
-    virtual int get_command()=0;
-    virtual void set_command(int val)=0;
+    virtual Commands * get_command()=0;
+    virtual void set_command(Commands * val)=0;
     virtual std::string get_level()=0;
-    virtual void set_print(bool is)=0;
 };
 
 

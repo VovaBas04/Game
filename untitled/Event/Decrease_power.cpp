@@ -5,9 +5,9 @@
 #include "Decrease_power.h"
 void Decrease_power::change_play() {
     hero->set_power(hero->get_power()-1);
-    level->set_command(Remove_power);
+    level->set_command_of_prefix("[GM]",new Command_decrease_power);
 }
-Decrease_power::Decrease_power(Player *h, Observer_Levels *l) {
+Decrease_power::Decrease_power(Player *h, Observable *l) {
     hero=h;
     level=l;
 }

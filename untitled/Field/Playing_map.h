@@ -15,8 +15,8 @@
 #include "../Logs/Level.h"
 class Playing_map {
 public:
-    Playing_map(int w, int h,Move *m,std::vector<Observer_Levels *> l);
-    Playing_map(Move *m,std::vector<Observer_Levels *> l);
+    Playing_map(int w, int h,Move *m,Observable * l);
+    Playing_map(Move *m,Observable * l);
     Playing_map(const Playing_map &map);
     Playing_map& operator=(const Playing_map &map);
     Playing_map (Playing_map &&map);
@@ -36,7 +36,7 @@ private:
     std::vector<std::vector<Playing_cell>>fields;
     Move *move;
     sf::Window *window;
-    std::vector<Observer_Levels *> levels;
+    Observable * levels;
 };
 
 

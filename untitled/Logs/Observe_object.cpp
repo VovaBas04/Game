@@ -16,3 +16,11 @@ void Observe_object::notify() {
 }
 Observe_object::Observe_object(std::vector<Observer_Levels *> l, std::vector<Logger *> log): levels(l), loggers(log) {
 }
+
+void Observe_object::set_command_of_prefix(std::string prefix,Commands *command) {
+    for (int i=0;i<levels.size();i++)
+        if (levels[i]->get_level()==prefix){
+            levels[i]->set_command(command);
+            return;}
+
+}

@@ -16,6 +16,7 @@ class Observe_object: public Observable{
 public:
     Observe_object(std::vector<Observer_Levels *> l, std::vector<Logger *> log);
     void notify() override;
+    void set_command_of_prefix(std::string prefix,Commands *command) override;
 protected:
     std::vector<Observer_Levels *> levels;
     std::vector<Logger *>loggers;

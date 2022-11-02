@@ -6,6 +6,7 @@
 #define UNTITLED_EVENT_PLAYING_H
 #include "../Play_mechanic/Player.h"
 #include "iostream"
+#include "../Logs/Observable.h"
 class Event_playing {
 public:
     virtual void change_play()=0;

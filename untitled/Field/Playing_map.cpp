@@ -3,7 +3,7 @@
 //
 #include "Playing_map.h"
 //using namespace std;
-Playing_map::Playing_map(int w, int h,Move *m,std::vector<Observer_Levels *> l): count_width(w), count_height(h), move(m), levels(l) {
+Playing_map::Playing_map(int w, int h,Move *m,Observable *l): count_width(w), count_height(h), move(m), levels(l) {
     float x = 1;
     float y = 1;
     srand(time(NULL));
@@ -25,9 +25,9 @@ Playing_map::Playing_map(int w, int h,Move *m,std::vector<Observer_Levels *> l):
             Abstract_factory *fac;
             int randint = rand();
             if (randint % 2)
-                fac = new Factory_Map(near_fields(i, j),levels[Game]);
+                fac = new Factory_Map(near_fields(i, j),levels);
             else
-                fac = new Factory_Characteristic(move->get_player(),levels[Game]);
+                fac = new Factory_Characteristic(move->get_player(),levels);
             randint = rand();
             if (randint%2)
                 fields[i][j].set_event(fac->create_positive_event());
@@ -35,7 +35,7 @@ Playing_map::Playing_map(int w, int h,Move *m,std::vector<Observer_Levels *> l):
                 fields[i][j].set_event(fac->create_negative_event());
         }
 }
-Playing_map::Playing_map(Move *m,std::vector<Observer_Levels *> l): Playing_map(10, 10, m, l){}
+Playing_map::Playing_map(Move *m,Observable * l): Playing_map(10, 10, m, l){}
 Playing_map::Playing_map(const Playing_map &map):count_width(map.count_width),count_height(map.count_height),side_field(map.side_field),levels(map.levels){
     for (int i = 0; i < map.count_height; i++) {
         std::vector<Playing_cell> in;
@@ -70,7 +70,7 @@ Playing_map& Playing_map:: operator=(Playing_map&& map){
     return *this;
 }
 std::vector<std::vector<Playing_cell>> Playing_map::render_map() {
-    Factory_Game *fac=new Factory_Game(move->get_player(),window,levels[Info]);
+    Factory_Game *fac=new Factory_Game(move->get_player(),window,levels);
     for (int i=0;i<count_height;i++)
         for(int j=0;j<count_width;j++) {
             if (fields[i][j].is_here(move)) {
