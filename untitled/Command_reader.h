@@ -14,16 +14,18 @@
 #include "SFML/Graphics.hpp"
 #include "Logs/Logger_File.h"
 #include "Logs/Logger_Console.h"
+#include "Input/Reader.h"
 #define MAX_LEN 1080
 class Command_reader {
 public:
-    Command_reader();
+    Command_reader(Reader *r);
     void create_texture(std::string png);
     void set_count();
     void set_levels(std::vector<Observer_Levels *> *levels);
-    int keyboard_move();
+    int keyboard_move(sf::Event *e);
     int get_width();
     int get_height();
+    bool is_end();
     void set_loggers(std::vector<Logger *> &l);
     sf::Sprite *get_sprite();
 private:
@@ -34,6 +36,8 @@ private:
     sf::Sprite point_hero;
     int count_width;
     int count_height;
+    bool is_pressed;
+    Reader *read;
     void set_level(std::string s,std::vector<Observer_Levels *> *levels);
 };
 

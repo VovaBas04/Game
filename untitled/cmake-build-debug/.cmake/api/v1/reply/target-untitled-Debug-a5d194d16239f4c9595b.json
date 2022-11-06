@@ -140,7 +140,13 @@
 				87,
 				89,
 				91,
-				93
+				93,
+				95,
+				97,
+				99,
+				101,
+				103,
+				105
 			]
 		}
 	],
@@ -240,7 +246,13 @@
 				87,
 				89,
 				91,
-				93
+				93,
+				95,
+				97,
+				99,
+				101,
+				103,
+				105
 			]
 		},
 		{
@@ -293,7 +305,13 @@
 				88,
 				90,
 				92,
-				94
+				94,
+				96,
+				98,
+				100,
+				102,
+				104,
+				106
 			]
 		}
 	],
@@ -820,6 +838,72 @@
 		{
 			"backtrace" : 1,
 			"path" : "Logs/Command_defeat.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Reader.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Reader.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Reader_file.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Reader_file.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Handler.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Handler.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Find_command.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Find_command.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Find_Keyboard.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Find_Keyboard.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Input/Cmp_values.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "Input/Cmp_values.h",
 			"sourceGroupIndex" : 1
 		}
 	],

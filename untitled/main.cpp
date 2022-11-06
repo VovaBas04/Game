@@ -8,13 +8,15 @@
 #include "Logs/Command_constructor.h"
 #include "Logs/Command_start.h"
 #include "Logs/Command_dont_move.h"
+#include "Input/Reader_file.h"
 #include <iostream>
 #include "fstream"
 int main()
 {
     sf::Image i=sf::Image();
     srand(time(NULL));
-    Command_reader input=Command_reader();
+    Reader *r= new Reader_file();
+    Command_reader input=Command_reader(r);
     input.create_texture("img/dragon.png");
     Player Hero=Player(3, 1, input.get_sprite());
     Move move=Move(&Hero, 0, 0,100);
@@ -38,16 +40,19 @@ int main()
     window.setKeyRepeatEnabled(false);
     Map.set_window(&window);
     Playing_map_view map_show=Playing_map_view(&Map);
+    r->read_keyboard();
     while (window.isOpen())
     {   sf::Event event;
         while (window.pollEvent(event))
         {
             if (event.type == sf::Event::Closed)
                 window.close();
-            if (move.change_position(width_window,height_window,input.keyboard_move()))
+            if (move.change_position(width_window,height_window,input.keyboard_move(&event)))
                 o->set_command_of_prefix("[WRN]",new Command_dont_move);
 //            std::cout<<Hero.get_health()<<'\n';
             o->notify();
+            if (input.is_end())
+                window.close();
         }
         map_show.show_map(&window);
     }
