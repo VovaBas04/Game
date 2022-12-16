@@ -8,9 +8,12 @@
 #include "../Field/Playing_cell.h"
 #include "../Logs/Level_Game.h"
 class Event_change_map:public Event_playing {
+public:
+    int get_save_code() override;
 protected:
     std::vector<Playing_cell *> near_field;
     Observable *level;
+    int save_code;
 };
 
 

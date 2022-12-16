@@ -12,9 +12,8 @@ class Handler {
 protected:
     Handler *next;
     std::string line;
-    std::map<std::string,sf::Keyboard::Key> map;
 public:
-    Handler(Handler *n,std::string s,std::map<std::string,sf::Keyboard::Key> m);
+    Handler(Handler *n,std::string s);
     virtual bool work_something()=0;
 };
 

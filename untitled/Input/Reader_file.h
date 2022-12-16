@@ -8,7 +8,7 @@
 #include <fstream>
 class Reader_file: public Reader{
 public:
-    void read_keyboard() override;
+    void read_keyboard(Save_keyboard *s) override;
     ~Reader_file() override;
     Reader_file();
 private:

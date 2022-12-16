@@ -1,9 +1,8 @@
 //
 // Created by vova on 09.09.22.
 //
-int i=0;
 #include "Move.h"
-Move::Move(Player *H, float x, float y,float s): hero(H), coor_x(x), coor_y(y),side(s){
+Move::Move(Player *H,float s): hero(H),side(s){
     dont_move=std::vector<bool>(4,false);
 }
 bool Move::change_position(int width_map, int height_map,int direction) {
@@ -54,4 +53,24 @@ float Move::get_y() {
 }
 void Move::set_dont_move(std::vector<bool> is){
     dont_move=is;
+}
+void Move::set_position(float x, float y) {
+    coor_x=x;
+    coor_y=y;
+}
+Move::Move(const Move &map):coor_x(map.coor_x),coor_y(map.coor_y),side(map.side),hero(map.hero){
+    for (int i=0;i<4;i++)
+        dont_move.push_back(map.dont_move[i]);
+}
+Move& Move::operator=(const Move &map){
+    if (this!=&map) {
+        dont_move.clear();
+        coor_x=map.coor_x;
+        coor_y=map.coor_y;
+        side=map.side;
+        hero=map.hero;
+        for (int i=0;i<4;i++)
+            dont_move.push_back(map.dont_move[i]);
+    }
+    return *this;
 }

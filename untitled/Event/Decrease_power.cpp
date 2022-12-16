@@ -10,4 +10,5 @@ void Decrease_power::change_play() {
 Decrease_power::Decrease_power(Player *h, Observable *l) {
     hero=h;
     level=l;
+    save_code=Power_decrease;
 }

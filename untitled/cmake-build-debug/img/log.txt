@@ -1,1 +1,15 @@
 [INF]game start
+[GM]your health decrease
+[GM]your health decrease
+[GM]your health decrease
+[GM]your health decrease
+[GM]your health decrease
+[GM]your power decrease
+[GM]your health decrease
+[GM]your health decrease
+[GM]your power decrease
+[GM]your health decrease
+[GM]your power decrease
+[GM]your health decrease
+[GM]your health decrease
+[INF]you defeat

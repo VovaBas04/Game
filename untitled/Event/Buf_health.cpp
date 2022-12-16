@@ -10,4 +10,5 @@ void Buf_health::change_play() {
 Buf_health::Buf_health(Player *h, Observable *l) {
     hero=h;
     level=l;
+    save_code=Health_decrease;
 }

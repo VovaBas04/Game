@@ -11,3 +11,4 @@ bool Find_command::work_something() {
     else
         return false;
 }
+Find_command::Find_command(Handler *n, std::string s, std::map<std::string, std::string> m): Handler(n,s),map(m) {}

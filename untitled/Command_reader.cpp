@@ -4,7 +4,9 @@
 #define Max_width 1920/100
 #define Max_height 1080/100
 #include "Command_reader.h"
-Command_reader::Command_reader(Reader *r):read(r) {
+Command_reader::Command_reader(Save_keyboard *h):hold(h) {
+    Map_Sfml *m=new Map_Sfml;
+    bindChar=m->bindChar;
     is_pressed= false;
 }
 void Command_reader::create_texture(std::string png) {
@@ -32,30 +34,30 @@ void Command_reader::set_count() {
 }
 //Доработать
 int Command_reader::keyboard_move(sf::Event *e) {
-    std::map<std::string,sf::Keyboard::Key> keyboard=read->get_keyboard();
+    std::map<std::string,std::string> keyboard=hold->get_keyboard();
     if (e->type==sf::Event::KeyReleased)
         is_pressed= false;
     if (is_pressed)
         return STOP;
-    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(keyboard["Left"]))) { point_hero.setTextureRect(sf::IntRect (dict_for_texture["LEFT"][LEFT_UP_X],
+    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(bindChar[keyboard["Left"]]))) { point_hero.setTextureRect(sf::IntRect (dict_for_texture["LEFT"][LEFT_UP_X],
                                                                                                     dict_for_texture["LEFT"][LEFT_UP_Y],
                                                                                                     dict_for_texture["LEFT"][RIGHT_DOWN_X],
                                                                                                     dict_for_texture["LEFT"][RIGHT_DOWN_Y]));
         is_pressed= true;
         return LEFT;}
-    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(keyboard["Right"]))) {     point_hero.setTextureRect(sf::IntRect (dict_for_texture["RIGHT"][LEFT_UP_X],
+    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(bindChar[keyboard["Right"]]))) {     point_hero.setTextureRect(sf::IntRect (dict_for_texture["RIGHT"][LEFT_UP_X],
                                                                                                          dict_for_texture["RIGHT"][LEFT_UP_Y],
                                                                                                          dict_for_texture["RIGHT"][RIGHT_DOWN_X],
                                                                                                          dict_for_texture["RIGHT"][RIGHT_DOWN_Y]));
         is_pressed= true;
         return RIGHT;}
-    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(keyboard["Up"]))) {     point_hero.setTextureRect(sf::IntRect(dict_for_texture["UP"][LEFT_UP_X],
+    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(bindChar[keyboard["Up"]]))) {     point_hero.setTextureRect(sf::IntRect(dict_for_texture["UP"][LEFT_UP_X],
                                                                                                      dict_for_texture["UP"][LEFT_UP_Y],
                                                                                                      dict_for_texture["UP"][RIGHT_DOWN_X],
                                                                                                      dict_for_texture["UP"][RIGHT_DOWN_Y]));
         is_pressed= true;
         return UP;}
-    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(keyboard["Down"]))) {     point_hero.setTextureRect(sf::IntRect (dict_for_texture["DOWN"][LEFT_UP_X],
+    if (e->type==sf::Event::KeyPressed &&(sf::Keyboard::isKeyPressed(bindChar[keyboard["Down"]]))) {     point_hero.setTextureRect(sf::IntRect (dict_for_texture["DOWN"][LEFT_UP_X],
                                                                                                         dict_for_texture["DOWN"][LEFT_UP_Y],
                                                                                                         dict_for_texture["DOWN"][RIGHT_DOWN_X],
                                                                                                         dict_for_texture["DOWN"][RIGHT_DOWN_Y]));
@@ -74,8 +76,8 @@ sf::Sprite *Command_reader::get_sprite(){
 }
 
 bool Command_reader::is_end() {
-    std::map<std::string,sf::Keyboard::Key> keyboard=read->get_keyboard();
-    if (sf::Keyboard::isKeyPressed(keyboard["Exit"]))
+    std::map<std::string,std::string> keyboard=hold->get_keyboard();
+    if (sf::Keyboard::isKeyPressed(bindChar[keyboard["Exit"]]))
         return true;
     else
         return false;
@@ -134,4 +136,17 @@ void Command_reader::set_loggers(std::vector<Logger *> &l) {
             if (s=="C")
                 l.push_back(new Logger_Console(nullptr));
 
+}
+int Command_reader::get_level_for_play() {
+    std::cout<<"Введите уровень, на котором вы хотите играть\n";
+    int level;
+    try{
+        std::cin>>level;
+        if (level>2 || level<1)
+            level=1;
+    }
+    catch (std::exception &e){
+        level=1;
+    }
+    return level;
 }

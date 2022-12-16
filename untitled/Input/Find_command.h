@@ -8,8 +8,10 @@
 #include "Find_Keyboard.h"
 class Find_command: public Handler{
 public:
-    using Handler::Handler;
+    Find_command(Handler *n,std::string s,std::map<std::string,std::string> m);
     bool work_something() override;
+private:
+    std::map<std::string,std::string> map;
 };
 
 

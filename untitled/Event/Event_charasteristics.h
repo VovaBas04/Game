@@ -8,10 +8,11 @@
 #include "../Logs/Level_Game.h"
 class Event_charasteristics: public Event_playing{
 public:
-//    virtual bool is_max_count(int characteristic)=0;
+    int get_save_code() override;
 protected:
     Player *hero;
     Observable *level;
+    int save_code;
 };
 
 

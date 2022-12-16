@@ -7,6 +7,7 @@
 #include <SFML/Graphics.hpp>
 #include "../Play_mechanic/Move.h"
 #include "../Event/Event_playing.h"
+
 class Playing_cell {
 public:
     Playing_cell(bool is, float s, float x, float y);
@@ -27,6 +28,7 @@ private:;
     float coor_x;
     bool is_was;
     float coor_y;
+    int code_event;
 };
 
 

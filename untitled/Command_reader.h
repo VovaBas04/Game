@@ -15,10 +15,12 @@
 #include "Logs/Logger_File.h"
 #include "Logs/Logger_Console.h"
 #include "Input/Reader.h"
+#include "Input/Save_keyboard.h"
+#include "Input/Map_Sfml.h"
 #define MAX_LEN 1080
 class Command_reader {
 public:
-    Command_reader(Reader *r);
+    Command_reader(Save_keyboard *s);
     void create_texture(std::string png);
     void set_count();
     void set_levels(std::vector<Observer_Levels *> *levels);
@@ -26,6 +28,7 @@ public:
     int get_width();
     int get_height();
     bool is_end();
+    int get_level_for_play();
     void set_loggers(std::vector<Logger *> &l);
     sf::Sprite *get_sprite();
 private:
@@ -37,7 +40,8 @@ private:
     int count_width;
     int count_height;
     bool is_pressed;
-    Reader *read;
+    Save_keyboard *hold;
+    std::map<std::string,sf::Keyboard::Key> bindChar;
     void set_level(std::string s,std::vector<Observer_Levels *> *levels);
 };
 

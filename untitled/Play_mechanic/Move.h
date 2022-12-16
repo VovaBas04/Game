@@ -11,12 +11,15 @@
 #include <unistd.h>
 class Move {
 public:
-    Move(Player *H, float x, float y,float s);
+    Move(Player *H,float s);
+    Move(const Move &map);
+    Move& operator=(const Move &map);
     bool change_position(int width_map,int height_map,int direction);
     float get_x();
     float get_y();
     Player *get_player();
     void set_dont_move(std::vector<bool> is);
+    void set_position(float x,float y);
 private:
     Player *hero;
     enum {LEFT,RIGHT,DOWN,UP,STOP};

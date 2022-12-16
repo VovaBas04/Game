@@ -28,6 +28,11 @@ public:
     Move * get_moving();
     std::vector<Playing_cell *> near_fields(int i, int j);
     void set_window(sf::Window *w);
+    void set_wall(int x,int y);
+    void set_event(int x,int y,Event_playing *e);
+    void set_event_of_code(int i,int j,int code);
+    Playing_cell *get_cell(int i,int j);
+    Observable *get_level();
 private:
     int count_width;
     int count_height;
@@ -37,6 +42,7 @@ private:
     Move *move;
     sf::Window *window;
     Observable * levels;
+    void win_road(int i,int j);
 };
 
 

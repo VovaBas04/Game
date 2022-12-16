@@ -8,8 +8,10 @@
 #include "Handler.h"
 class Find_Keyboard: public Handler{
 public:
-    using Handler::Handler;
+    Find_Keyboard(Handler *n,std::string s,std::map<std::string,sf::Keyboard::Key> m);
     bool work_something() override;
+private:
+    std::map<std::string,sf::Keyboard::Key> map;
 };
 
 

@@ -8,10 +8,10 @@ Reader_file::Reader_file() {
 }
 
 
-void Reader_file::read_keyboard() {
+void Reader_file::read_keyboard(Save_keyboard *s) {
     std::string line;
     while (getline(in,line)){
-        parse_string(line);
+        parse_string(line,s);
     }
 }
 

@@ -7,6 +7,8 @@
 #include "Event_playing.h"
 #include "../Logs/Level_Info.h"
 class Game_over: public Event_playing{
+public:
+    int get_save_code() override;
 protected:
     Player *hero;
     sf::Window *window;

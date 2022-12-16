@@ -16,6 +16,9 @@ private:
     sf::Texture *wall;
     sf::Texture *normal;
     sf::Texture *was;
+    sf::Texture *final;
+    sf::RectangleShape  *load;
+    sf::RectangleShape  *save;
 };
 
 

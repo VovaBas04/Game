@@ -15,4 +15,5 @@ Create_Wall::Create_Wall(std::vector<Playing_cell *> c, Observable *l) {
     for(int i=0;i<4;i++)
         near_field.push_back(c[i]);
     level=l;
+    save_code=Wall_create;
 }

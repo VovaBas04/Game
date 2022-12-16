@@ -3,3 +3,7 @@
 //
 
 #include "Event_charasteristics.h"
+
+int Event_charasteristics::get_save_code() {
+    return save_code;
+}

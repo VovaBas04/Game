@@ -10,4 +10,5 @@ void Decrease_health::change_play() {
 Decrease_health::Decrease_health(Player *h, Observable *l) {
     hero=h;
     level=l;
+    save_code=Health_decrease;
 }

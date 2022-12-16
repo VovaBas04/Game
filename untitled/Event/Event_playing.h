@@ -7,9 +7,11 @@
 #include "../Play_mechanic/Player.h"
 #include "iostream"
 #include "../Logs/Observable.h"
+enum{Wall_destroy,Wall_create,Health_buf,Health_decrease,Power_decrease};
 class Event_playing {
 public:
     virtual void change_play()=0;
+    virtual int get_save_code()=0;
 };
 
 
